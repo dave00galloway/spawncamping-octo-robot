@@ -68,7 +68,7 @@ testCase("strftime test", {
 				this.date.strftime("%y") === "09");
 	},
 	"test format shorthand %F" : function() {
-		assert("%F should act as %Y-%m-%d",
-				this.date.strftime("%F") === "2009-10-02");
+		assert("%F should be shortcut for %Y-%m-%d",
+				Date.formats.F === "%Y-%m-%d");
 	}
 });
