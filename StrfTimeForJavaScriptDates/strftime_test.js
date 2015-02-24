@@ -72,3 +72,10 @@ testCase("strftime test", {
 				Date.formats.F === "%Y-%m-%d");
 	}
 });
+
+testCase("String trim test", {
+	"test trim should remove leading white-space" : function() {
+		assert("should remove leading white-space",
+				"a stringffff" === "   a string".trim());
+	}
+});
