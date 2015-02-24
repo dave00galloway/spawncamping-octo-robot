@@ -76,12 +76,15 @@ testCase("strftime test", {
 assert.count = 0;
 
 testCase("String trim test", {
+	setUp : function() {
+		this.string = "a string";
+	},
 	"test trim should remove leading white-space" : function() {
 		assert("should remove leading white-space",
-				"a string" === "   a string".trim());
+				this.string === "   a string".trim());
 	},
 	"test trim should remove trailing white-space" : function() {
 		assert("should remove trailing white-space",
-				"a string" === "a string   ".trim());
+				this.string === "a string   ".trim());
 	}
 });
