@@ -47,7 +47,7 @@ function testCase(name, tests) {
 			+ " failures</strong>", color);
 }
 
-//var date = new Date(2009, 9, 2);
+// var date = new Date(2009, 9, 2);
 testCase("strftime test", {
 	setUp : function() {
 		this.date = new Date(2009, 9, 2, 22, 14, 45);
@@ -73,9 +73,15 @@ testCase("strftime test", {
 	}
 });
 
+assert.count = 0;
+
 testCase("String trim test", {
 	"test trim should remove leading white-space" : function() {
 		assert("should remove leading white-space",
-				"a stringffff" === "   a string".trim());
+				"a string" === "   a string".trim());
+	},
+	"test trim should remove trailing white-space" : function() {
+		assert("should remove trailing white-space",
+				"a string" === "a string   ".trim());
 	}
 });

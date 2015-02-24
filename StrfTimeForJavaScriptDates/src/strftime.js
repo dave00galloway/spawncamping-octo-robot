@@ -41,3 +41,8 @@ Date.prototype.strftime = (function() {
 	};
 	return strftime;
 }());
+
+String.prototype.trim = function() {
+	return this.replace(/^\s+|\s+$/g,'');
+
+};
