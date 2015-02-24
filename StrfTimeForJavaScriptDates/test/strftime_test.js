@@ -1,6 +1,3 @@
-
-
-// var date = new Date(2009, 9, 2);
 testCase("strftime test", {
 	setUp : function() {
 		this.date = new Date(2009, 9, 2, 22, 14, 45);
@@ -23,21 +20,5 @@ testCase("strftime test", {
 	"test format shorthand %F" : function() {
 		assert("%F should be shortcut for %Y-%m-%d",
 				Date.formats.F === "%Y-%m-%d");
-	}
-});
-
-assert.count = 0;
-
-testCase("String trim test", {
-	setUp : function() {
-		this.string = "a string";
-	},
-	"test trim should remove leading white-space" : function() {
-		assert("should remove leading white-space",
-				this.string === "   a string".trim());
-	},
-	"test trim should remove trailing white-space" : function() {
-		assert("should remove trailing white-space",
-				this.string === "a string   ".trim());
 	}
 });
