@@ -16,7 +16,7 @@ TestCase("strftimeTest", {
 		assertEquals("10", month);
 	},
 	"test %d should return date" : function() {
-		assertEquals("03", Date.formats.d(this.date));
+		assertEquals("02", Date.formats.d(this.date));
 	},
 	"test %y should return year as two digits" : function() {
 		assertEquals("09", Date.formats.y(this.date));
